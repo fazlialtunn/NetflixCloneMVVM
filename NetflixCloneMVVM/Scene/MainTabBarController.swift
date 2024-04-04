@@ -41,7 +41,7 @@ class MainTabBarController: UITabBarController {
         SearchVCNav.tabBarItem = UITabBarItem(title: "Search", image: UIImage(systemName: "magnifyingglass"), tag: 3)
         DownloadsVCNav.tabBarItem = UITabBarItem(title: "Downloads", image: UIImage(systemName: "arrow.down.circle"), tag: 4)
         
-        tabBar.tintColor = .red
+        tabBar.tintColor = .label
         
         HomeVCNav.navigationBar.prefersLargeTitles = true
         UpcomingVCNav.navigationBar.prefersLargeTitles = true
