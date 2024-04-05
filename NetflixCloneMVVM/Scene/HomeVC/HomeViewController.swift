@@ -22,6 +22,8 @@ class HomeViewController: UIViewController {
         tableView.dataSource = self
         tableView.register(CollectionViewTableViewCell.self, forCellReuseIdentifier: CollectionViewTableViewCell.identifier)
         view.addSubview(tableView)
+        let headerView = HomeHeaderView(frame: CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight*0.35))
+        tableView.tableHeaderView = headerView
         tableView.snp.makeConstraints { make in
             make.top.left.right.bottom.equalToSuperview()
         }
@@ -30,7 +32,7 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 56
+        return 10
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
