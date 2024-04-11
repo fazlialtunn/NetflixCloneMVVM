@@ -22,6 +22,7 @@
 		FB6287B92BAD78C900A75C51 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6287B82BAD78C900A75C51 /* MainTabBarController.swift */; };
 		FB6287BE2BAD78CA00A75C51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB6287BD2BAD78CA00A75C51 /* Assets.xcassets */; };
 		FB6287C12BAD78CA00A75C51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB6287BF2BAD78CA00A75C51 /* LaunchScreen.storyboard */; };
+		FBCFCE552BC8274700E0BAED /* DownloadsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBCFCE542BC8274600E0BAED /* DownloadsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		FB6287BD2BAD78CA00A75C51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB6287C02BAD78CA00A75C51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FB6287C22BAD78CA00A75C51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FBCFCE542BC8274600E0BAED /* DownloadsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				FB067EFA2BB41DBB0006B60F /* DownloadsViewController.swift */,
+				FBCFCE542BC8274600E0BAED /* DownloadsViewModel.swift */,
 			);
 			path = DownloadsVC;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 			files = (
 				FB067EFF2BB41DC80006B60F /* UpcomingViewController.swift in Sources */,
 				FB067EFD2BB41DC20006B60F /* SearchViewController.swift in Sources */,
+				FBCFCE552BC8274700E0BAED /* DownloadsViewModel.swift in Sources */,
 				FB09DA192BBEA6100042934E /* CollectionViewTableViewCell.swift in Sources */,
 				FB6287B92BAD78C900A75C51 /* MainTabBarController.swift in Sources */,
 				FB6287B52BAD78C900A75C51 /* AppDelegate.swift in Sources */,
