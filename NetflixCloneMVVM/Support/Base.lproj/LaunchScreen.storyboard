@@ -26,7 +26,7 @@
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="labelColor"/>
                         <constraints>
                             <constraint firstItem="zvr-Su-Sdr" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="8ru-mo-cxa"/>
                             <constraint firstItem="zvr-Su-Sdr" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="rFP-qF-beo"/>
@@ -40,8 +40,8 @@
     </scenes>
     <resources>
         <image name="AppLogo" width="1024" height="1024"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>
