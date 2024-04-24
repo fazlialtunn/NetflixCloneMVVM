@@ -64,7 +64,16 @@ extension Endpoints: EndpointsProtocol {
     }
     
     func requestAPI() -> URLRequest {
-        <#code#>
+        guard let apiURL = URLComponents(string: getAllURL()) else {
+            fatalError("URLComponents oluşturulamadı")
+        }
+        guard let url = apiURL.url else {
+            fatalError("URL oluşturulamadı.")
+        }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = method.rawValue
+        return request
     }
     
 }
