@@ -7,3 +7,10 @@
 
 import Foundation
 
+protocol MovieListViewModelProtocol {
+    func load()
+}
+
+enum MovieListViewModel {
+    
+}
