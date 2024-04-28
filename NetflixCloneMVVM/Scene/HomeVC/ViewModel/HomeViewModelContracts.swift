@@ -12,5 +12,4 @@ protocol MovieListViewModelProtocol {
 }
 
 enum MovieListViewModel {
-    
 }
