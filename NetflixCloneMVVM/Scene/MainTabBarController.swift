@@ -21,7 +21,7 @@ class MainTabBarController: UITabBarController {
 //        SearchVC.navigationItem.largeTitleDisplayMode = .always
 //        DownloadsVC.navigationItem.largeTitleDisplayMode = .always
         
-        let HomeVCNav = UINavigationController(rootViewController: HomeVC)
+        let HomeVCNav = UINavigationController(rootViewController: HomeViewModelBuilder.make())
         let UpcomingVCNav = UINavigationController(rootViewController: UpcomingVC)
         let SearchVCNav = UINavigationController(rootViewController: SearchVC)
         let DownloadsVCNav = UINavigationController(rootViewController: DownloadsVC)

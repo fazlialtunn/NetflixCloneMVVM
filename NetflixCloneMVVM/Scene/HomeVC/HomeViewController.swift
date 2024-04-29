@@ -11,10 +11,16 @@ import SnapKit
 class HomeViewController: UIViewController {
 
     lazy var tableView = UITableView()
+    var popularMovies = [MovieResult]()
+    var upcomingMovies = [MovieResult]()
+    var topRatedMovies = [MovieResult]()
+    var viewModel: HomeViewModel?
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         setupUI()
+        viewModel?.delegate = self
+        viewModel?.load()
     }
  
     func setupUI(){
@@ -28,6 +34,23 @@ class HomeViewController: UIViewController {
             make.top.left.right.bottom.equalToSuperview()
         }
     }
+}
+
+extension HomeViewController: MovieListViewModelDelegate {
+    func handleOutput(_ output: MovieListViewModelOutput) {
+        switch output {
+        case .popular(let popularResult):
+            popularMovies = popularResult
+            print(popularResult)
+        case .upcoming(let upcomingResult):
+            upcomingMovies = upcomingResult
+        case .topRated(let topRatedResult):
+            topRatedMovies = topRatedResult
+        case .error(let error):
+            print(error)
+        }
+    }
+    
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {

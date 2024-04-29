@@ -11,7 +11,7 @@ protocol APIServiceProtocol {
     func createRequest<T: Decodable>(_ endPoint: Endpoints, completion: @escaping (Result<T,Error>) -> Void)
 }
 
-final class APICaller {
+final class APICaller: APIServiceProtocol {
     
     enum APIError: Error {
         case failedToGetData
