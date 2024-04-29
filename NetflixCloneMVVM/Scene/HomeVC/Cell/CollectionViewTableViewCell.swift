@@ -9,6 +9,8 @@ import UIKit
 
 class CollectionViewTableViewCell: UITableViewCell {
     static let identifier = "CollectionViewTableViewCell"
+    var movieArray = [MovieResult]()
+    private var collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewLayout())
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -31,15 +33,27 @@ class CollectionViewTableViewCell: UITableViewCell {
             make.top.left.right.bottom.equalToSuperview()
         }
     }
+    public func configure(movies: [MovieResult]) {
+        self.movieArray = movies
+        DispatchQueue.main.async {
+            self.collectionView.reloadData()
+        }
+    }
 }
+
+
 
 extension CollectionViewTableViewCell: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return movieArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MovieCollectionViewCell.identifier , for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MovieCollectionViewCell.identifier , for: indexPath) as! MovieCollectionViewCell
+        if let model = movieArray[indexPath.row].posterPath {
+            print(model)
+            cell.configureImageURL(model: model)
+        }
         cell.backgroundColor = .systemRed
         return cell
     }

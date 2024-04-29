@@ -14,6 +14,7 @@ class HomeViewController: UIViewController {
     var popularMovies = [MovieResult]()
     var upcomingMovies = [MovieResult]()
     var topRatedMovies = [MovieResult]()
+    let sections: [String] = ["Popular","Upcoming Movies", "Top Rated"]
     var viewModel: HomeViewModel?
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,11 +42,19 @@ extension HomeViewController: MovieListViewModelDelegate {
         switch output {
         case .popular(let popularResult):
             popularMovies = popularResult
-            print(popularResult)
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
         case .upcoming(let upcomingResult):
             upcomingMovies = upcomingResult
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
         case .topRated(let topRatedResult):
             topRatedMovies = topRatedResult
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
         case .error(let error):
             print(error)
         }
@@ -54,12 +63,25 @@ extension HomeViewController: MovieListViewModelDelegate {
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return sections.count
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: CollectionViewTableViewCell.identifier, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: CollectionViewTableViewCell.identifier, for: indexPath) as! CollectionViewTableViewCell
+        switch indexPath.section {
+        case SectionsTableView.popular.rawValue:
+            cell.configure(movies: popularMovies)
+        case SectionsTableView.topRated.rawValue:
+            cell.configure(movies: topRatedMovies)
+        case SectionsTableView.upcoming.rawValue:
+            cell.configure(movies: upcomingMovies)
+        default:
+            break
+        }
         return cell
     }
     

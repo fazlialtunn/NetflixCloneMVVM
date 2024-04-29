@@ -24,6 +24,7 @@
 		FB6287C12BAD78CA00A75C51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB6287BF2BAD78CA00A75C51 /* LaunchScreen.storyboard */; };
 		FB8454AE2BDFB1F200ABF068 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8454AD2BDFB1F200ABF068 /* HomeViewModel.swift */; };
 		FB8454B02BDFBCBF00ABF068 /* HomeViewModelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8454AF2BDFBCBF00ABF068 /* HomeViewModelBuilder.swift */; };
+		FB8454B22BDFCAD300ABF068 /* SectionTableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8454B12BDFCAD300ABF068 /* SectionTableView+Extension.swift */; };
 		FBA111A02BDADDC0000A6E01 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA1119F2BDADDC0000A6E01 /* Movie.swift */; };
 		FBBF08C42BD999C300F9412D /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBF08C32BD999C300F9412D /* APICaller.swift */; };
 		FBBF08C72BD9AA2300F9412D /* HomeViewModelContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBBF08C62BD9AA2300F9412D /* HomeViewModelContracts.swift */; };
@@ -49,6 +50,7 @@
 		FB6287C22BAD78CA00A75C51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FB8454AD2BDFB1F200ABF068 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		FB8454AF2BDFBCBF00ABF068 /* HomeViewModelBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelBuilder.swift; sourceTree = "<group>"; };
+		FB8454B12BDFCAD300ABF068 /* SectionTableView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SectionTableView+Extension.swift"; sourceTree = "<group>"; };
 		FBA1119F2BDADDC0000A6E01 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		FBBF08C32BD999C300F9412D /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		FBBF08C62BD9AA2300F9412D /* HomeViewModelContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelContracts.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				FB09DA1A2BBEA9440042934E /* CGFloat+Extension.swift */,
+				FB8454B12BDFCAD300ABF068 /* SectionTableView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 				FB8454B02BDFBCBF00ABF068 /* HomeViewModelBuilder.swift in Sources */,
 				FBA111A02BDADDC0000A6E01 /* Movie.swift in Sources */,
 				FB6287B92BAD78C900A75C51 /* MainTabBarController.swift in Sources */,
+				FB8454B22BDFCAD300ABF068 /* SectionTableView+Extension.swift in Sources */,
 				FB6287B52BAD78C900A75C51 /* AppDelegate.swift in Sources */,
 				FBBF08C72BD9AA2300F9412D /* HomeViewModelContracts.swift in Sources */,
 				FB09DA1B2BBEA9440042934E /* CGFloat+Extension.swift in Sources */,

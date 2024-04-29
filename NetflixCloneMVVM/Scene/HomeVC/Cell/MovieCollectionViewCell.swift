@@ -30,17 +30,19 @@ class MovieCollectionViewCell: UICollectionViewCell {
         posterImageView.frame = contentView.bounds
     }
     
-    func configureImageURL(model: String) {
-        guard let url = URL(string: "https://image.tmdb.org/t/p/w500/\(model)") else {
+    public func configureImageURL(model: String) {
+        guard let url = URL(string: "https://image.tmdb.org/t/p/w500\(model)") else {
             return
         }
-        URLSession.shared.dataTask(with: url) {[weak self] data, response, error in
-            guard let data = data, error != nil else {
+        URLSession.shared.dataTask(with: url) {[weak self] data, _, _ in
+            guard let data = data else {
                 return
             }
             DispatchQueue.main.async {
+                print(data)
                 self?.posterImageView.image = UIImage(data: data)
             }
         }
+        .resume()
     }
 }
