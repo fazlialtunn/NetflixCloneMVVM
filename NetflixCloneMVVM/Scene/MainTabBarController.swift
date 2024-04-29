@@ -11,7 +11,7 @@ class MainTabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let HomeVC = HomeViewController()
+        //let HomeVC = HomeViewController()
         let UpcomingVC = UpcomingViewController()
         let SearchVC = SearchViewController()
         let DownloadsVC = DownloadsViewController()

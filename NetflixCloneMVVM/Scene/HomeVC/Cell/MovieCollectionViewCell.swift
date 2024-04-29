@@ -29,4 +29,18 @@ class MovieCollectionViewCell: UICollectionViewCell {
         super.layoutSubviews()
         posterImageView.frame = contentView.bounds
     }
+    
+    func configureImageURL(model: String) {
+        guard let url = URL(string: "https://image.tmdb.org/t/p/w500/\(model)") else {
+            return
+        }
+        URLSession.shared.dataTask(with: url) {[weak self] data, response, error in
+            guard let data = data, error != nil else {
+                return
+            }
+            DispatchQueue.main.async {
+                self?.posterImageView.image = UIImage(data: data)
+            }
+        }
+    }
 }
