@@ -16,6 +16,6 @@ This project uses nearly all core concepts of Swift.
 <img width="322" alt="Screenshot 2023-07-11 at 00 54 50" src="https://github.com/fazlialtunn/NetflixCloneMVVM/assets/32793348/edaea7c2-55ce-4a5a-8ff8-cd4c3eb70f26">
 
 
-<spacer>
+
 #TMDB API
 https://developer.themoviedb.org/reference/intro/getting-started
