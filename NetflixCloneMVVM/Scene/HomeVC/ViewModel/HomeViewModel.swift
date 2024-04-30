@@ -24,6 +24,24 @@ final class HomeViewModel: MovieListViewModelProtocol {
                 self?.delegate?.handleOutput(.error(error.localizedDescription))
             }
         }
+        apiService.createRequest(.topRated) { [weak self] (result: Result<Movie, Error>) in
+            switch result {
+            case .success(let movie):
+                self?.delegate?.handleOutput(.topRated(movie.results))
+            case .failure(let error):
+                self?.delegate?.handleOutput(.error(error.localizedDescription))
+            }
+        }
+
+        apiService.createRequest(.upcoming) { [weak self] (result: Result<Movie, Error>) in
+            switch result {
+            case .success(let movie):
+                self?.delegate?.handleOutput(.upcoming(movie.results))
+            case .failure(let error):
+                self?.delegate?.handleOutput(.error(error.localizedDescription))
+            }
+        }
+
     }
     
      

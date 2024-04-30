@@ -63,6 +63,19 @@ extension HomeViewController: MovieListViewModelDelegate {
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        switch section {
+        case 0:
+            "Popular"
+        case 1:
+            "Top Rated"
+        case 2:
+            "Coming Soon"
+        default:
+            ""
+        }
+    }
+
     func numberOfSections(in tableView: UITableView) -> Int {
         return sections.count
     }
