@@ -7,9 +7,9 @@ This project uses nearly all core concepts of Swift.
 
 - Programmatic UI
 - TMDB API Connection
-- URLRequest
-- SnapKit
 - MVVM
+- SnapKit
+- URLRequest
 - Advanced TableView & CollectionView
 
 # Screenshots
