@@ -1,4 +1,4 @@
-# Netflix Clone with MVVM Architecture
+# Netflix Clone with MVVM
 
 This project is a simplified clone of Netflix, utilizing the TMDB API to fetch movie data. It's built with Swift and follows the MVVM architecture pattern, demonstrating various core concepts of iOS development.
 
