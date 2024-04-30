@@ -1,17 +1,14 @@
 # Netflix Clone with MVVM Architecture
 
-This is a food ordering app that I developed for learning Swift.
+This is a movies or series watching app like Netflix.
 This project uses nearly all core concepts of Swift.
 
 # Features
 
-- Onboarding Screens with Multiple Slides
-- Advanced TableView & CollectionView Usage
-- Custom API Connection
-- URLRequest
-- KingFisher
-- ProgressHUD
-- IQKeyboardManagerSwift
+- TMDB API Connection
+- Advanced TableView & CollectionView
+- SnapKit
+- MVVM
 
 # Screenshots
 <img width="322" alt="Screenshot 2023-07-11 at 00 54 50" src="https://github.com/fazlialtunn/NetflixCloneMVVM/assets/32793348/3ffa1cf7-2521-41f5-a652-b021f58c3453">
